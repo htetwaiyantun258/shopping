@@ -5,7 +5,7 @@
 define('MYSQL_USER','root');
 define('MYSQL_PASSWORD', '');
 define('MYSQL_HOST', 'localhost');
-define('MYSQL_DATABASE','shop');
+define('MYSQL_DATABASE','ashop');
 
 
 $option = array(
@@ -15,4 +15,3 @@ $option = array(
 $pdo = new PDO(
     'mysql:host='.MYSQL_HOST.';dbname='.MYSQL_DATABASE,MYSQL_USER,MYSQL_PASSWORD,$option
 );
-

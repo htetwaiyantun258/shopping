@@ -59,39 +59,38 @@ if($_POST){
     ?>
 
 <?php require "header.php" ?>
-    <div class="card">
-        <div class="card-body">
-            <h1>Create User Control</h1>
-            <form enctype="multipart/form-data" action="" method="post" >
-                <div class="form-group">
+<div class="card">
+    <div class="card-body">
+        <h1>Create User Control</h1>
+        <form enctype="multipart/form-data" action="" method="post">
+            <div class="form-group">
                 <input type="hidden" name="_token" value="<?php echo $_SESSION['_token']?>">
                 <p style="color:red"><?php echo empty($nameError) ? '': "***".$nameError ?></p>
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" name="name">
-                </div>
-                <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
                 <p style="color:red"><?php echo empty($emailError) ? '': "***".$emailError ?></p>
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email">
-                </div>
-                <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
                 <p style="color:red"><?php echo empty($passError) ? '': "***".$passError ?></p>
-                    <label for="password">Password</label>
-                    <input type="text" class="form-control" name="password">
-                </div>
-                
-                    <label for="role">Admin</label>
-                    <input type="checkbox" class="form-control" name="role">
-                <br>
-                
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" name="submit" value="Submit">
-                    <a href="userlist.php" type="button" class="btn btn-warning">Back</a>
-                </div>
-            </form>
-        </div>
+                <label for="password">Password</label>
+                <input type="text" class="form-control" name="password">
+            </div>
+
+            <label for="role">Admin</label>
+            <input type="checkbox" class="form-control" name="role">
+            <br>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+                <a href="userlist.php" type="button" class="btn btn-warning">Back</a>
+            </div>
+        </form>
     </div>
+</div>
 
 
-    <?php require "footer.html" ?>
-
+<?php require "footer.html" ?>
